@@ -6,12 +6,7 @@
   font-family: "Roboto", sans-serif;
   font-size: 20px;
 }
-.ciao {
-  width: 100%;
-  height: 200px;
-  background-color: red;
-  display: none;
-}
+
 .container {
   width: 85%;
   margin: 0 auto;
@@ -114,15 +109,13 @@ header .navbar-2 ul li {
     rgba(0, 0, 0, 0.08) 0px 8px 16px 0px;
 }
 
-.show {
-  display: block;
-}
-
 .navbar-2 .nav-dropdown .nav-dropdownMenu ul li {
   padding: 5% 6%;
   margin: 10px 0;
 }
+
 /* Navbar for md/sm/xs device */
+
 .hidden-nav {
   display: none;
   padding: 25px;
@@ -138,6 +131,8 @@ header .navbar-2 ul li {
 
 .hidden-content {
   display: none;
+  position: absolute;
+  width: 100%;
 }
 
 /* hidden navbar-content */
@@ -157,14 +152,16 @@ header .navbar-2 ul li {
 .hidden-menu {
   padding: 3% 0;
   max-height: 100vh;
+  margin-bottom: 100px;
 }
 
 .hidden-btn {
   position: fixed;
   display: none;
   bottom: 0;
-  padding: 3%;
+  padding: 20px;
   width: 100%;
+  height: 100px;
   justify-content: center;
   z-index: 1;
   background-color: #fff;
@@ -176,10 +173,20 @@ header .navbar-2 ul li {
   align-items: center;
   justify-content: space-between;
   margin: 30px 0 30px 0;
+  font-size: 25px;
 }
 
-.hidden-menu .container ul:first-of-type {
+.hidden-menu .container ul.border-ul {
   border-bottom: 1px solid #ccc;
+}
+
+/* Submenu Section */
+.hidden-menu .container .border-ul .dropdown-links .submenu-ul {
+  display: none;
+}
+
+.hidden-menu .container .border-ul .dropdown-links li {
+  padding: 15px 0;
 }
 
 /* Main Jumbo Section */
@@ -203,6 +210,31 @@ header .navbar-2 ul li {
   width: 600px;
 }
 
+/* degug! */
+.ciao {
+  background-color: red;
+}
+
+/* /////////////////////////////
+          @ MEDIA
+//////////////////////////// */
+
+@media (min-width: 1080px) {
+  .hidden-nav {
+    display: none !important;
+    padding: 25px;
+  }
+  .hidden-content {
+    display: none !important;
+  }
+  .hidden-menu {
+    display: none !important;
+  }
+  #main {
+    display: block !important;
+  }
+}
+
 @media (max-width: 1080px) {
   .hidden-nav {
     display: block;
@@ -210,6 +242,7 @@ header .navbar-2 ul li {
     justify-content: space-between;
     align-items: center;
   }
+
   .navbar-1,
   .navbar-2 {
     display: none;
